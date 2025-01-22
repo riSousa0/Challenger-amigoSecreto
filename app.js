@@ -1,15 +1,15 @@
 
 let listaDeAmigo = [];
 let amigo = "";
+const listaAmigos = document.getElementById("listaAmigos")
 
-
-// monstra o amigo sorteado
+// amigo sorteado
 function amigoSorteado(amigo){
     exibirNaTelaId("erroNome", "")
     exibirNaTelaId("resultado", `O seu amigo secreto é ${amigo}`);
     let indexAmigo = listaDeAmigo.indexOf(amigo);
     listaDeAmigo.splice(indexAmigo, 1);
-    exibirNaTela("ul", listaDeAmigo);
+    autalizaAlista();
     amigo = "";
 }
 
@@ -32,16 +32,16 @@ function adicionarAmigo() {
     exibirNaTelaId("resultado", "");
     amigo = document.querySelector("input").value;
     if (amigo == ""){
-        exibirNaTelaId("erroNome", "Erro! Adicione um nome")
+        exibirNaTelaId("erroNome", "Erro! Adicione um nome");
     } else {
-        exibirNaTelaId("erroNome", "")
+        exibirNaTelaId("erroNome", "");
         if (listaDeAmigo.includes(amigo)){
-        exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`)
+        exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`);
         } else {
-            exibirNaTelaId("erroNome", "")
-            listaDeAmigo.push(amigo)
+            exibirNaTelaId("erroNome", "");
+            listaDeAmigo.push(amigo);
             console.log(listaDeAmigo);
-            exibirNaTela("ul", listaDeAmigo);
+            autalizaAlista();
             limpaCampo();
         }
     }
@@ -50,7 +50,7 @@ function adicionarAmigo() {
 // exibir na tela pelo id ou tag
 function exibirNaTelaId(id, texto) {
     let campo = document.getElementById(id);
-    campo.innerHTML = texto
+    campo.innerHTML = texto;
 }
 
 function exibirNaTela(tag, texto) {
@@ -62,6 +62,16 @@ function exibirNaTela(tag, texto) {
 function limpaCampo(){
     amigo = document.querySelector("input");
     amigo.value = "";
+}
+
+// lista na vertical
+function autalizaAlista(){
+    exibirNaTelaId("listaAmigos", '');
+        for (let i = 0; i < listaDeAmigo.length; i++){
+            const lista = document.createElement("li");
+            lista.innerHTML = listaDeAmigo[i];
+            listaAmigos.appendChild(lista);
+        }
 }
 
 
