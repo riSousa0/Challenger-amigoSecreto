@@ -13,14 +13,14 @@ function amigoSorteado(amigo){
     amigo = "";
 }
 
-// sortea o amigo
+// Função para sortear um amigo (Dentro da lista)
 function sortearAmigo() {
     exibirNaTelaId("resultado", "")
     let tamanhoListaAmigos = listaDeAmigo.length;
     if (tamanhoListaAmigos == 0){
         exibirNaTelaId("erroNome", "Erro! Nenhum nome na lita")
     } else {
-    // função para escolher pelo index
+    // Função para escolher pelo index
     let indexAmigoSorteado = Math.floor(Math.random() * tamanhoListaAmigos);
     console.log(listaDeAmigo[indexAmigoSorteado]);
     amigo = listaDeAmigo[indexAmigoSorteado];
@@ -47,7 +47,7 @@ function adicionarAmigo() {
     }
 }
 
-// exibir na tela pelo id ou tag
+// Exibir um mensagem tela pelo id ou tag
 function exibirNaTelaId(id, texto) {
     let campo = document.getElementById(id);
     campo.innerHTML = texto;
@@ -58,13 +58,13 @@ function exibirNaTela(tag, texto) {
     campo.innerHTML = texto;
 }
 
-// limpeza
+// Limpeza input
 function limpaCampo(){
     amigo = document.querySelector("input");
     amigo.value = "";
 }
 
-// lista na vertical
+// Lista na vertical
 function autalizaAlista(){
     exibirNaTelaId("listaAmigos", '');
         for (let i = 0; i < listaDeAmigo.length; i++){
