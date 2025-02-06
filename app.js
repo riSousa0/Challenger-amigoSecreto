@@ -18,13 +18,13 @@ function sortearAmigo() {
     exibirNaTelaId("resultado", "")
     let tamanhoListaAmigos = listaDeAmigo.length;
     if (tamanhoListaAmigos == 0){
-        exibirNaTelaId("erroNome", "Erro! Nenhum nome na lita")
+        exibirNaTelaId("erroNome", "Erro! Nenhum nome na lista")
     } else {
-    // Função para escolher pelo index
-    let indexAmigoSorteado = Math.floor(Math.random() * tamanhoListaAmigos);
-    console.log(listaDeAmigo[indexAmigoSorteado]);
-    amigo = listaDeAmigo[indexAmigoSorteado];
-    return amigoSorteado(amigo);
+        // Função para escolher pelo index
+        let indexAmigoSorteado = Math.floor(Math.random() * tamanhoListaAmigos);
+        console.log(listaDeAmigo[indexAmigoSorteado]);
+        amigo = listaDeAmigo[indexAmigoSorteado];
+        return amigoSorteado(amigo);
     }
 }
 
@@ -36,7 +36,7 @@ function adicionarAmigo() {
     } else {
         exibirNaTelaId("erroNome", "");
         if (listaDeAmigo.includes(amigo)){
-        exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`);
+            exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`);
         } else {
             exibirNaTelaId("erroNome", "");
             listaDeAmigo.push(amigo);
