@@ -17,8 +17,8 @@ function amigoSorteado(amigo){
 function sortearAmigo() {
     exibirNaTelaId("resultado", "")
     let tamanhoListaAmigos = listaDeAmigo.length;
-    if (tamanhoListaAmigos == 0){
-        exibirNaTelaId("erroNome", "Erro! Nenhum nome na lista")
+    if (tamanhoListaAmigos == 0 || tamanhoListaAmigos == 1){
+        exibirNaTelaId("erroNome", "Erro! Escreva dois nomes para sortear")
     } else {
         // Função para escolher pelo index
         let indexAmigoSorteado = Math.floor(Math.random() * tamanhoListaAmigos);
@@ -32,7 +32,7 @@ function adicionarAmigo() {
     exibirNaTelaId("resultado", "");
     amigo = document.querySelector("input").value;
     if (amigo == ""){
-        exibirNaTelaId("erroNome", "Erro! Adicione um nome");
+        exibirNaTelaId("erroNome", "Erro! Escreva um nome para adiciona-lo à lista");
     } else {
         exibirNaTelaId("erroNome", "");
         if (listaDeAmigo.includes(amigo)){
