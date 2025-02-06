@@ -1,12 +1,12 @@
 
 let listaDeAmigo = [];
 let amigo = "";
-const listaAmigos = document.getElementById("listaAmigos")
+const listaAmigos = document.getElementById("listaAmigos");
 
-// amigo sorteado
+
 function amigoSorteado(amigo){
-    exibirNaTelaId("erroNome", "")
-    exibirNaTelaId("resultado", `O seu amigo secreto é ${amigo}`);
+    exibirNaTelaId("erroNome", "");
+    exibirNaTela("h1", `${amigo} é seu amigo secreto`);
     let indexAmigo = listaDeAmigo.indexOf(amigo);
     listaDeAmigo.splice(indexAmigo, 1);
     autalizaAlista();
@@ -29,6 +29,7 @@ function sortearAmigo() {
 }
 
 function adicionarAmigo() {
+    exibirNaTela("h1", "Amigo secreto")
     exibirNaTelaId("resultado", "");
     amigo = document.querySelector("input").value;
     if (amigo == ""){
@@ -58,7 +59,7 @@ function exibirNaTela(tag, texto) {
     campo.innerHTML = texto;
 }
 
-// Limpeza input
+// Limpeza
 function limpaCampo(){
     amigo = document.querySelector("input");
     amigo.value = "";
@@ -67,11 +68,11 @@ function limpaCampo(){
 // Lista na vertical
 function autalizaAlista(){
     exibirNaTelaId("listaAmigos", '');
-        for (let i = 0; i < listaDeAmigo.length; i++){
-            const lista = document.createElement("li");
-            lista.innerHTML = listaDeAmigo[i];
-            listaAmigos.appendChild(lista);
-        }
+    for (let i = 0; i < listaDeAmigo.length; i++){
+        const lista = document.createElement("li");
+        lista.innerHTML = listaDeAmigo[i];
+        listaAmigos.appendChild(lista);
+    }
 }
 
 
