@@ -14,6 +14,7 @@
     <main class="main-content">
         <header class="header-banner">
             <h1 id="title" class="main-title">Amigo Secreto</h1>
+            <p id="amigoSorteado" class="result-list"></p>
         </header>
         
         <section class="input-section">
@@ -32,6 +33,9 @@
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
                     Sortear amigo
+                </button>
+                <button class="button-refresh" onclick="sortearAmigo()" aria-label="Limpar lista" disabled>
+                    Limpar lista
                 </button>
             </div>
         </section>

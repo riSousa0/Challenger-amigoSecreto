@@ -6,7 +6,7 @@ const listaAmigos = document.getElementById("listaAmigos");
 
 function amigoSorteado(amigo){
     exibirNaTelaId("erroNome", "");
-    exibirNaTela("h1", `${amigo} é seu amigo secreto`);
+    exibirNaTelaId("amigoSorteado", `${amigo} é seu amigo secreto`);
     let indexAmigo = listaDeAmigo.indexOf(amigo);
     listaDeAmigo.splice(indexAmigo, 1);
     autalizaAlista();
@@ -29,7 +29,7 @@ function sortearAmigo() {
 }
 
 function adicionarAmigo() {
-    exibirNaTela("h1", "Amigo secreto")
+    exibirNaTela("h1", "Amigo secreto");
     exibirNaTelaId("resultado", "");
     amigo = document.querySelector("input").value;
     if (amigo == ""){
