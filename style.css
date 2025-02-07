@@ -188,11 +188,17 @@ ul {
 .button-refresh {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 50%;
     color: var(--color-white);
-    background-color: var(--color-button);
-    padding: 10px 40px;
+    background-color: var(--color-primary);
+    padding: 10px 20px;
     font-size: 1.6rem;
+    transition-duration: 1s;
+}
+
+.button-refresh:hover{
+    background-color: #6877c4;
 }
 
 .button-refresh:disabled {
