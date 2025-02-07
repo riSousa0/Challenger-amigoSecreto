@@ -6,6 +6,7 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    font-size: 62.5%;
 }
 
 /* Estilos gerais */
@@ -15,9 +16,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    font-size: 62.5%;
-}
 
 body {
     height: 100vh;
