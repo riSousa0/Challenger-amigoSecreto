@@ -146,14 +146,6 @@ ul {
     margin: 0;
 }
 
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 4rem;
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    text-align: center;
-}
 
 .erro-list {
     margin-top: 15px;
@@ -189,20 +181,21 @@ ul {
     justify-content: center;
     width: 50%;
     color: var(--color-white);
-    background-color: var(--color-primary);
+    background-color: red;
     padding: 10px 20px;
     font-size: 1.6rem;
     transition-duration: 1s;
 }
 
 .button-refresh:hover{
-    background-color: #6877c4;
+    background-color: rgba(255, 0, 0, 0.664);
 }
 
 .button-refresh:disabled {
     background-color: var(--color-white);
     color: #444444;
     font-size: 1.6rem;
+    cursor: default;
 }
 
 
@@ -226,7 +219,13 @@ ul {
     }
 }
 
-.ul:hover {
-    color: #df0505;
+/* Parte em implementação
+ul:only-child {
+    color: black;
+    cursor: pointer;
 }
 
+
+ul:only-child:hover {
+    color: #df0505;
+} */
