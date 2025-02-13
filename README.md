@@ -1,10 +1,11 @@
 ## Challenger Amigo Secreto
 
-Desenvovildo como um dos challenger da One Next Education 
+Desenvolvido como um dos challenger da One Next Education 
 
-## Demostração
+## Preview
 
-![Vídeo sem título ‐ Feito com o Clipchamp (3)](https://github.com/user-attachments/assets/c37375e5-08a4-431c-8230-0287ae247a09)
+![Vídeo sem título ‐ Feito com o Clipchamp](https://github.com/user-attachments/assets/7bdd33cf-58d7-4d3d-ab25-01fdc600b057)
+
 
 ## Funcionalidade
 
@@ -14,7 +15,7 @@ Desenvovildo como um dos challenger da One Next Education
 
 -Linguagem em Java
 
--Estrutura em Css e Html
+-Estrutura em Css e HTML
 
 
 
