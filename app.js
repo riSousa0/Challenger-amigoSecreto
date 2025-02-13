@@ -6,7 +6,7 @@ const listaAmigos = document.getElementById("listaAmigos");
 
 function amigoSorteado(amigo){
     exibirNaTelaId("erroNome", "");
-    exibirNaTela("h1", `${amigo}`);
+    exibirNaTela("h1", `<strong class="amigoSorteado">${amigo}</strong>`);
     exibirNaTelaId("amigoSorteado", "É seu amigo secreto")
     let indexAmigo = listaDeAmigo.indexOf(amigo);
     listaDeAmigo.splice(indexAmigo, 1);
@@ -20,6 +20,7 @@ function sortearAmigo() {
     exibirNaTelaId("amigoSorteado", "");
     let tamanhoListaAmigos = listaDeAmigo.length;
     if (tamanhoListaAmigos == 0 || tamanhoListaAmigos == 1){
+        exibirNaTela("h1", "Amigo secreto");
         exibirNaTelaId("erroNome", "Erro! Escreva dois nomes para sortear");
     } else {
         // Função para escolher pelo index
@@ -33,11 +34,12 @@ function adicionarAmigo() {
     exibirNaTela("h1", "Amigo secreto");
     exibirNaTelaId("amigoSorteado", "");
     amigo = document.querySelector("input").value;
+    var amigoMinuscula = amigo.toLowerCase();
     if (amigo == ""){
         exibirNaTelaId("erroNome", "Erro! Escreva um nome para adiciona-lo à lista");
     } else {
         exibirNaTelaId("erroNome", "");
-        if (listaDeAmigo.includes(amigo)){
+        if (listaDeAmigo.includes(amigoMinuscula)){
             exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`);
         } else {
             exibirNaTelaId("erroNome", "");
@@ -82,8 +84,9 @@ function autalizaAlista(){
         const lista = document.createElement("li");
         lista.innerHTML = listaDeAmigo[i];
         listaAmigos.appendChild(lista);
+        lista.addEventListener("click", function() {
+            listaDeAmigo.splice(i, 1)
+            autalizaAlista()
+        })
     }
 }
-
-
-

@@ -65,6 +65,12 @@ body {
     color: var(--color-white);
 }
 
+.amigoSorteado {
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    color: rgb(139, 255, 139);
+}
+
 .section-title {
     font-family: "Inter", serif;
     font-size: 3.0rem;
@@ -219,13 +225,14 @@ ul {
     }
 }
 
-/* Parte em implementação
+
 ul:only-child {
     color: black;
     cursor: pointer;
 }
 
 
-ul:only-child:hover {
+li:hover {
     color: #df0505;
-} */
+} 
+
