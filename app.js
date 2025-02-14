@@ -7,6 +7,7 @@ const listaAmigos = document.getElementById("listaAmigos");
 function amigoSorteado(amigo){
     exibirNaTelaId("erroNome", "");
     exibirNaTela("h1", `<strong class="amigoSorteado">${amigo}</strong>`);
+    lançarConfetti();
     exibirNaTelaId("amigoSorteado", "É seu amigo secreto")
     let indexAmigo = listaDeAmigo.indexOf(amigo);
     listaDeAmigo.splice(indexAmigo, 1);
@@ -89,4 +90,13 @@ function autalizaAlista(){
             autalizaAlista()
         })
     }
+}
+
+
+function lançarConfetti() {
+    confetti({
+        particleCount: 500, 
+        spread: 160,        
+        origin: { x: 0.5, y: 0.5 } 
+    });
 }
