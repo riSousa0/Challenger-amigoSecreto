@@ -1,20 +1,22 @@
-## Challenger Amigo Secreto
-
+### Challenger Amigo Secreto
+***
 Desenvovildo como um dos challenger da One Next Education 
 
-## Demostração
+## Preview
 
-![Vídeo sem título ‐ Feito com o Clipchamp (3)](https://github.com/user-attachments/assets/c37375e5-08a4-431c-8230-0287ae247a09)
+![Vídeo sem título ‐ Feito com o Clipchamp (1)](https://github.com/user-attachments/assets/367f0f08-ff24-40e3-b748-4b12d524d3b5)
 
-## Funcionalidade
+## Funcionalidades
 
  - Um sorteio aleatório entre nomes à sua escolha
+ - Clicar no nome tira ele dá lista
+ - Nomes iguais não são aceitos
 
 ## Tecnologias usadas
 
--Linguagem em Java
-
--Estrutura em Css e Html
+- Linguagem em Java
+- Estrutura em Html
+- Estilização em Java
 
 
 
