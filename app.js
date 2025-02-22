@@ -11,6 +11,8 @@ function amigoSorteado(amigo){
     listaDeAmigo.splice(indexAmigo, 1);
     autalizaAlista();
     amigo = "";
+    document.getElementById("recomecar").removeAttribute("disabled");
+    lançarConfetti();
 }
 
 // Função para sortear um amigo (Dentro da lista)
@@ -31,11 +33,12 @@ function sortearAmigo() {
 function adicionarAmigo() {
     exibirNaTelaId("resultado", "");
     amigo = document.querySelector("input").value;
+    var amigoMinuscula = amigo.toLowerCase();
     if (amigo == ""){
         exibirNaTelaId("erroNome", "Erro! Escreva um nome para adiciona-lo à lista");
     } else {
         exibirNaTelaId("erroNome", "");
-        if (listaDeAmigo.includes(amigo)){
+        if (listaDeAmigo.includes(amigoMinuscula)){
             exibirNaTelaId("erroNome", `Erro! Esse nome ${amigo} ja foi adicionado`);
         } else {
             exibirNaTelaId("erroNome", "");
@@ -71,7 +74,26 @@ function autalizaAlista(){
             const lista = document.createElement("li");
             lista.innerHTML = listaDeAmigo[i];
             listaAmigos.appendChild(lista);
+            lista.addEventListener("click", function() {
+                listaDeAmigo.splice(i, 1)
+                autalizaAlista()
+            })
         }
+    }
+
+function lançarConfetti() {
+    confetti({
+        particleCount: 500, 
+        spread: 160,        
+        origin: { x: 0.5, y: 0.5 } 
+    });
 }
 
-
+function recomecar() {
+    exibirNaTela("h1", "Amigo secreto");
+    exibirNaTelaId("resultado", "");
+    listaDeAmigo = [];
+    autalizaAlista();
+    limpaCampo();
+    document.getElementById("recomecar").setAttribute("disabled", "disabled");
+}
